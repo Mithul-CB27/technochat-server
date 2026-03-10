@@ -71,7 +71,7 @@ app.post("/api/query", async (req, res) => {
   }
 });
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`\n✓ Proxy server running at http://localhost:${PORT}`);
   console.log(`  Anthropic API key: ${ANTHROPIC_API_KEY ? "found ✓" : "MISSING ✗"}`);
